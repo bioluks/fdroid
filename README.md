@@ -109,6 +109,17 @@ That channel must maintain its own source/configuration, signer, credentials
 and publication mechanism; this workflow does not mirror GitHub into Forgejo.
 Only an initial empty publication uses `--bootstrap`. Never share channel
 signing keys. Run updater policy regressions with `python -m unittest -v`.
+
+### Independent Forgejo publication
+
+[Forgejo workflow](.github/workflows/forgejo.yml) runs daily at 04:47 UTC or on
+manual dispatch. GitHub is only the executor: it checks out Forgejo's own updater
+source, reads Forgejo's own releases and publishes its `site` branch with an
+independent signing certificate. The HTTPS publication token is restricted to
+`execd/fdroid` with repository-write scope. Neither repository is a mirror and
+there is no server SSH publisher. This workflow has no GitHub API token or Pages
+permissions; Forgejo signing material is separate from this channel's secrets.
+
 Regenerate the dependency lock deliberately using
 `uv pip compile requirements.in --universal --generate-hashes --output-file requirements.txt`.
 
