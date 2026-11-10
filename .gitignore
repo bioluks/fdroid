@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+_site/
+config.yml
+*.jks
+*.p12
+*.keystore
+*.pem
+.env
+.env.*

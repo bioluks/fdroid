@@ -1,0 +1,12 @@
+# fdroidserver 2.4.5; updater writes config.yml only in a private temporary directory.
+repo_name: KernelSU-Tailscaled companion
+repo_description: >-
+  Independent stable-only binary repository for the optional KernelSU-Tailscaled
+  companion. Requires root and the separately installed module. Original
+  developer-signed release APKs; not built or endorsed by official F-Droid.
+archive_older: 0
+make_current_version_link: false
+keystorepass:
+  env: FDROID_KEYSTORE_PASSWORD
+keypass:
+  env: FDROID_KEYSTORE_PASSWORD

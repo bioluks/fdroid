@@ -1,0 +1,21 @@
+Categories:
+  - Connectivity
+License: BSD-3-Clause
+Name: KernelSU-Tailscaled
+Summary: Optional root companion for the KernelSU-Tailscaled module
+Description: |-
+  Native controls, module status, logs, Android sharing and Taildrop integration
+  for the separately installed KernelSU-Tailscaled module.
+
+  This optional companion requires a rooted device and the KernelSU-Tailscaled
+  module. It is not a standalone VPN and does not install the module.
+
+  This independent binary repository redistributes unchanged developer-signed
+  stable release APKs. These packages are not built or reviewed by official
+  F-Droid. Source and build/release workflow provenance are available in the
+  linked source repository and its releases.
+RequiresRoot: true
+AllowedAPKSigningKeys:
+  - 0924bb045985c248e9ddf9e9139e090aeac72446ae94cf41d8896af5dc626ae3
+AutoUpdateMode: None
+UpdateCheckMode: None
